@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: eureka
+  security:
+    user:
+      name: user
+      password: root
+server:
+  port: 7901
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://user:root@localhost:7901/eureka/
+  server:
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 5000
